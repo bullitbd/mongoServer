@@ -1,10 +1,8 @@
 'use strict'; // Notes
 
-
 var Entry = require('../models/entry_model');
 
 var bodyparser = require('body-parser');
-
 
 module.exports = function(router) {
 
@@ -18,7 +16,7 @@ module.exports = function(router) {
                 return;
             }
             res.json(data);
-        })
+        });
         // find all
     });
 
@@ -33,19 +31,16 @@ module.exports = function(router) {
         });
     });
 
-
-
     // post
     // simple body post - writeFile...
     router.post('/entries', function(req, res) {
         var newEntry = new Entry(req.body);
         newEntry.save(function(err, data) {
-            if(err) {res.status(500).send({msg: 'couldn\'t save post'});
+            if (err) {res.status(500).send({msg: 'couldn\'t save post'});
             return;}
             res.json(data);
         });
     });
-
 
     // put
     // ideally, we need to get a resource to be edited;
@@ -62,8 +57,6 @@ module.exports = function(router) {
         });
     });
 
-
-
     // delete
     // in this case, delete file;
     router.delete('/entries/:id', function(req, res) {
@@ -75,6 +68,4 @@ module.exports = function(router) {
             res.json(data);
         });
     });
-
-
 };

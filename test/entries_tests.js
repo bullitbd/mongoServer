@@ -1,6 +1,6 @@
 'use strict';
 
-process.env.MONGO_URI='mongodb://localhost/entries_testdb';
+process.env.MONGO_URI = 'mongodb://localhost/entries_testdb';
 var mongoose = require('mongoose');
 var chai = require('chai');
 var chaihttp = require('chai-http');
@@ -13,18 +13,20 @@ var servAddr = 'localhost:3001';
 require('../lib/server.js');
 
 var testObj = {
-    tag: "food",
-    ideaBody: "recipe for food",
-    title: "great food"
+    tag: 'food',
+    ideaBody: 'recipe for food',
+    title: 'great food'
 };
 
-var id = "";
+var id = '';
 
-describe('entriesApi endpoint tests', function () {
+describe('entriesApi endpoint tests', function() {
     before(function(done) {
         var testEntry = new Entry({title: 'newIdea'});
         testEntry.save(function(err, data) {
-            if (err) console.log(err);
+            if (err) {
+                console.log(err);
+            }
             this.testEntry = data;
             id = this.testEntry._id;
             done();
@@ -37,7 +39,7 @@ describe('entriesApi endpoint tests', function () {
         done();
     });
 
-    it('get request should return all records', function (done) {
+    it('get request should return all records', function(done) {
         chai.request(servAddr)
             .get('/api/entries')
             .end(function(err, res) {
@@ -48,8 +50,7 @@ describe('entriesApi endpoint tests', function () {
             });
     });
 
-
-    it('get/id request should return associated record', function (done) {
+    it('get/id request should return associated record', function(done) {
         chai.request(servAddr)
             .get('/api/entries/' + id)
             .end(function(err, res) {
@@ -63,7 +64,7 @@ describe('entriesApi endpoint tests', function () {
 
     });
 
-    it('post request should create new record', function (done) {
+    it('post request should create new record', function(done) {
         chai.request(servAddr)
             .post('/api/entries')
             .send(testObj)
@@ -73,22 +74,19 @@ describe('entriesApi endpoint tests', function () {
                 expect(res.body).to.have.property('_id');
                 done();
             });
+    });
 
-    } );
-
-    it('put request should replace requested record', function (done) {
+    it('put request should replace requested record', function(done) {
         chai.request(servAddr)
             .put('/api/entries/' + id)
-            .send({tag:"testing"})
+            .send({tag:'testing'})
             .end(function(err, res) {
-                console.log(res.body);
                 expect(err).to.eql(null);
                 expect(res).to.have.status(200);
                 expect(res.body.ok).to.eql(1);
                 done();
             });
     });
-
 
     after(function(done) {
         mongoose.connection.db.dropDatabase(function() {
