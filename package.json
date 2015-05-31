@@ -2,6 +2,10 @@
   "name": "mongoServer",
   "version": "0.1.0",
   "description": "simple express with mongo",
+  "repository" :
+  { "type" : "git"
+  , "url" : "https://github.com/bullitbd/mongoServer"
+  },
   "main": "index.js",
   "directories": {
     "test": "test"
@@ -9,8 +13,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Bob Day (mostly toastynerd...)",
+  "license": "MIT",
   "dependencies": {
     
     "body-parser": "^1.12.4",
