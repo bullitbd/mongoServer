@@ -1,22 +1,7 @@
 'use strict';
 
-var tell = require('./tell');
-document.write(tell());
-var entryList = document.getElementById('entryList');
+require('angular/angular');
 
-var request = require('superagent');
+var entriesApp = angular.module('entriesApp', []);
 
-request
-	.get('./api/entries')
-	.end(function(err, res) {
-		if (err) {
-			return console.log(err);
-		}
-		var entries = JSON.parse(res.text);
-
-		entries.forEach(function(entry) {
-			var entryEl = document.createElement('li');
-			entryEl.innerHTML = entry.ideaBody;
-			entryList.appendChild(entryEl);
-		});
-	});
+require('./entries/controllers/entries_controller')(entriesApp);

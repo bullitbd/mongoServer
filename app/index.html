@@ -1,13 +1,59 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>Client App</title>
+  <meta charset="UTF-8">
+  <title>Client Side</title>
+  <style type="text/css">
+  	body {font-family: "Gill Sans MT", sans-serif; font-size:1.2em;}
+  	.label {color:blue;}
+  	input {font-size:.8em;}
+  </style>
 </head>
-<body>
- 	<h1>Yo World!</h1>
- 	<ul id="entryList"></ul>   
+<body data-ng-app="entriesApp">
+	<main data-ng-controller="entriesController" data-ng-init="getAll()">
+		<h1>Entries:</h1>
+		
+		<div data-ng-if="errors.length">
+			<h2>Errors</h2>
+			<ul data-ng-repeat="error in errors">
+				<li>{{errors.msg}}</li>
+			</ul>
+			<button data-ng-click="clearErrors()">Clear Errors</button><br>
+		</div>
+		
+		<form name="newEntryForm" data-ng-submit="createNewEntry()">
+			
+			<input type="text" placeholder="Title" required data-ng-model="newEntry.title">
+			<input type="text" placeholder="Body" required data-ng-model="newEntry.ideaBody"></label>
+			<input type="text" placeholder="Tag" data-ng-model="newEntry.tag"></label>
+			<button type="submit" data-ng-disabled="newEntryForm.$invalid">Submit New Entry</button>
+		</form>
+		<br>
+		
+		<ul data-ng-repeat="entry in entries">
+			
+			<li>
+				<form data-ng-if="!entry.editing">
+					<span class="label">Title:</span> {{entry.title}}&nbsp;&nbsp;
+					<span class="label">Entry:</span> {{entry.ideaBody}}&nbsp;&nbsp;
+					<span class="label">Tag:</span> {{entry.tag}}&nbsp;&nbsp;
+					<button data-ng-click="removeEntry(entry)">Delete</button>&nbsp;&nbsp;
+					<button data-ng-if="!entry.editing" data-ng-click="editingEntry(entry)">Edit</button>
+				</form>
 
-    <script src="bundle.js"></script>
+
+				<form name="editForm" data-ng-if="entry.editing" data-ng-submit="editEntry(entry)">
+					<label style="color:blue;">{{'editing ' + entry._id}}</label><br>
+					<input type="text" data-ng-model="entry.title" required>
+					<input type="text" data-ng-model="entry.ideaBody" required>
+					<input type="text" data-ng-model="entry.tag">
+					<button type="button" data-ng-click="resetEntry(entry)">Cancel</button>
+					<button type="submit" data-ng-disabled="editForm.$invalid">Save Entry</button>
+				</form>
+
+			</li>
+		</ul>
+	</main>
+	<script src="bundle.js"></script>
 </body>
 </html>
