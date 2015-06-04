@@ -3,7 +3,10 @@
 **/db
 consolehistory
 **/build
+**/bundle.js
+**/*
 **/*0.html
 **/*0.js
 **/*0.txt
+**/*.log
 	

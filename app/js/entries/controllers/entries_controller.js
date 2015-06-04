@@ -13,7 +13,7 @@ module.exports = function(app) {
 				})
 				.error(function(data) {
 					console.log(data);
-					$scope.errors.push({msg: 'error receiving Entries'});
+					$scope.errors.push({msg: 'error retrieving entries'});
 				});
 		};
 
@@ -43,7 +43,7 @@ module.exports = function(app) {
 			$http.delete('/api/entries/' + entry._id) 
 				.error(function(data) {
 					console.log(data);
-					$scope.errors.push({msg: 'could not remove note: ' + entry.title});
+					$scope.errors.push({msg: 'could not remove entry: ' + entry.title});
 				});
 		};
 
