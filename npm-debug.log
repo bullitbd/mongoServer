@@ -1,0 +1,271 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/Volumes/MacData/bullit/.node/bin/node',
+1 verbose cli   '/Volumes/MacData/bullit/.node/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'grunt-karma',
+1 verbose cli   'karma-jasmine',
+1 verbose cli   'karma-phantomjs-loader',
+1 verbose cli   '--save-dev' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.35
+4 verbose readDependencies using package.json deps
+5 verbose cache add [ 'grunt-karma', null ]
+6 verbose cache add name=undefined spec="grunt-karma" args=["grunt-karma",null]
+7 verbose parsed url { protocol: null,
+7 verbose parsed url   slashes: null,
+7 verbose parsed url   auth: null,
+7 verbose parsed url   host: null,
+7 verbose parsed url   port: null,
+7 verbose parsed url   hostname: null,
+7 verbose parsed url   hash: null,
+7 verbose parsed url   search: null,
+7 verbose parsed url   query: null,
+7 verbose parsed url   pathname: 'grunt-karma',
+7 verbose parsed url   path: 'grunt-karma',
+7 verbose parsed url   href: 'grunt-karma' }
+8 verbose cache add [ 'karma-jasmine', null ]
+9 verbose cache add name=undefined spec="karma-jasmine" args=["karma-jasmine",null]
+10 verbose parsed url { protocol: null,
+10 verbose parsed url   slashes: null,
+10 verbose parsed url   auth: null,
+10 verbose parsed url   host: null,
+10 verbose parsed url   port: null,
+10 verbose parsed url   hostname: null,
+10 verbose parsed url   hash: null,
+10 verbose parsed url   search: null,
+10 verbose parsed url   query: null,
+10 verbose parsed url   pathname: 'karma-jasmine',
+10 verbose parsed url   path: 'karma-jasmine',
+10 verbose parsed url   href: 'karma-jasmine' }
+11 verbose cache add [ 'karma-phantomjs-loader', null ]
+12 verbose cache add name=undefined spec="karma-phantomjs-loader" args=["karma-phantomjs-loader",null]
+13 verbose parsed url { protocol: null,
+13 verbose parsed url   slashes: null,
+13 verbose parsed url   auth: null,
+13 verbose parsed url   host: null,
+13 verbose parsed url   port: null,
+13 verbose parsed url   hostname: null,
+13 verbose parsed url   hash: null,
+13 verbose parsed url   search: null,
+13 verbose parsed url   query: null,
+13 verbose parsed url   pathname: 'karma-phantomjs-loader',
+13 verbose parsed url   path: 'karma-phantomjs-loader',
+13 verbose parsed url   href: 'karma-phantomjs-loader' }
+14 silly lockFile 707ccff9-grunt-karma grunt-karma
+15 verbose lock grunt-karma /Volumes/MacData/bullit/.npm/707ccff9-grunt-karma.lock
+16 silly lockFile df56d5e8-karma-jasmine karma-jasmine
+17 verbose lock karma-jasmine /Volumes/MacData/bullit/.npm/df56d5e8-karma-jasmine.lock
+18 silly lockFile 103678f0-karma-phantomjs-loader karma-phantomjs-loader
+19 verbose lock karma-phantomjs-loader /Volumes/MacData/bullit/.npm/103678f0-karma-phantomjs-loader.lock
+20 silly lockFile df56d5e8-karma-jasmine karma-jasmine
+21 silly lockFile df56d5e8-karma-jasmine karma-jasmine
+22 silly lockFile 707ccff9-grunt-karma grunt-karma
+23 silly lockFile 707ccff9-grunt-karma grunt-karma
+24 silly lockFile 103678f0-karma-phantomjs-loader karma-phantomjs-loader
+25 silly lockFile 103678f0-karma-phantomjs-loader karma-phantomjs-loader
+26 verbose addNamed [ 'karma-jasmine', '' ]
+27 verbose addNamed [ null, '*' ]
+28 silly lockFile a9316641-karma-jasmine karma-jasmine@
+29 verbose lock karma-jasmine@ /Volumes/MacData/bullit/.npm/a9316641-karma-jasmine.lock
+30 verbose addNamed [ 'grunt-karma', '' ]
+31 verbose addNamed [ null, '*' ]
+32 silly lockFile 94531edb-grunt-karma grunt-karma@
+33 verbose lock grunt-karma@ /Volumes/MacData/bullit/.npm/94531edb-grunt-karma.lock
+34 verbose addNamed [ 'karma-phantomjs-loader', '' ]
+35 verbose addNamed [ null, '*' ]
+36 silly lockFile ad169971-karma-phantomjs-loader karma-phantomjs-loader@
+37 verbose lock karma-phantomjs-loader@ /Volumes/MacData/bullit/.npm/ad169971-karma-phantomjs-loader.lock
+38 silly addNameRange { name: 'karma-jasmine', range: '*', hasData: false }
+39 silly addNameRange { name: 'grunt-karma', range: '*', hasData: false }
+40 verbose request where is /karma-jasmine
+41 verbose request registry https://registry.npmjs.org/
+42 verbose request id 4e89c2ee58fa142f
+43 verbose url raw /karma-jasmine
+44 verbose url resolving [ 'https://registry.npmjs.org/', './karma-jasmine' ]
+45 verbose url resolved https://registry.npmjs.org/karma-jasmine
+46 verbose request where is https://registry.npmjs.org/karma-jasmine
+47 info trying registry request attempt 1 at 12:20:09
+48 http GET https://registry.npmjs.org/karma-jasmine
+49 verbose request where is /grunt-karma
+50 verbose request registry https://registry.npmjs.org/
+51 verbose url raw /grunt-karma
+52 verbose url resolving [ 'https://registry.npmjs.org/', './grunt-karma' ]
+53 verbose url resolved https://registry.npmjs.org/grunt-karma
+54 verbose request where is https://registry.npmjs.org/grunt-karma
+55 info trying registry request attempt 1 at 12:20:09
+56 http GET https://registry.npmjs.org/grunt-karma
+57 silly addNameRange { name: 'karma-phantomjs-loader', range: '*', hasData: false }
+58 verbose request where is /karma-phantomjs-loader
+59 verbose request registry https://registry.npmjs.org/
+60 verbose url raw /karma-phantomjs-loader
+61 verbose url resolving [ 'https://registry.npmjs.org/', './karma-phantomjs-loader' ]
+62 verbose url resolved https://registry.npmjs.org/karma-phantomjs-loader
+63 verbose request where is https://registry.npmjs.org/karma-phantomjs-loader
+64 info trying registry request attempt 1 at 12:20:09
+65 http GET https://registry.npmjs.org/karma-phantomjs-loader
+66 http 200 https://registry.npmjs.org/grunt-karma
+67 silly registry.get cb [ 200,
+67 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+67 silly registry.get     etag: '"8XHQBQA623X12XHRMMHKQQM9Q"',
+67 silly registry.get     'content-type': 'application/json',
+67 silly registry.get     'cache-control': 'max-age=60',
+67 silly registry.get     'content-length': '47314',
+67 silly registry.get     'accept-ranges': 'bytes',
+67 silly registry.get     date: 'Tue, 02 Jun 2015 19:20:09 GMT',
+67 silly registry.get     via: '1.1 varnish',
+67 silly registry.get     age: '15',
+67 silly registry.get     connection: 'keep-alive',
+67 silly registry.get     'x-served-by': 'cache-sjc3125-SJC',
+67 silly registry.get     'x-cache': 'HIT',
+67 silly registry.get     'x-cache-hits': '1',
+67 silly registry.get     'x-timer': 'S1433272809.399463,VS0,VE0',
+67 silly registry.get     vary: 'Accept' } ]
+68 http 200 https://registry.npmjs.org/karma-jasmine
+69 silly registry.get cb [ 200,
+69 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+69 silly registry.get     etag: '"D33SC8GORB3I2U3WZCSBZ5NA5"',
+69 silly registry.get     'content-type': 'application/json',
+69 silly registry.get     'cache-control': 'max-age=60',
+69 silly registry.get     'content-length': '32016',
+69 silly registry.get     'accept-ranges': 'bytes',
+69 silly registry.get     date: 'Tue, 02 Jun 2015 19:20:09 GMT',
+69 silly registry.get     via: '1.1 varnish',
+69 silly registry.get     age: '0',
+69 silly registry.get     connection: 'keep-alive',
+69 silly registry.get     'x-served-by': 'cache-sjc3120-SJC',
+69 silly registry.get     'x-cache': 'HIT',
+69 silly registry.get     'x-cache-hits': '1',
+69 silly registry.get     'x-timer': 'S1433272809.397257,VS0,VE36',
+69 silly registry.get     vary: 'Accept' } ]
+70 http 404 https://registry.npmjs.org/karma-phantomjs-loader
+71 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+71 verbose headers   'content-type': 'application/json',
+71 verbose headers   'cache-control': 'max-age=0',
+71 verbose headers   'content-length': '51',
+71 verbose headers   'accept-ranges': 'bytes',
+71 verbose headers   date: 'Tue, 02 Jun 2015 19:20:09 GMT',
+71 verbose headers   via: '1.1 varnish',
+71 verbose headers   age: '0',
+71 verbose headers   connection: 'keep-alive',
+71 verbose headers   'x-served-by': 'cache-sjc3128-SJC',
+71 verbose headers   'x-cache': 'MISS',
+71 verbose headers   'x-cache-hits': '0',
+71 verbose headers   'x-timer': 'S1433272809.394844,VS0,VE104' }
+72 silly registry.get cb [ 404,
+72 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+72 silly registry.get     'content-type': 'application/json',
+72 silly registry.get     'cache-control': 'max-age=0',
+72 silly registry.get     'content-length': '51',
+72 silly registry.get     'accept-ranges': 'bytes',
+72 silly registry.get     date: 'Tue, 02 Jun 2015 19:20:09 GMT',
+72 silly registry.get     via: '1.1 varnish',
+72 silly registry.get     age: '0',
+72 silly registry.get     connection: 'keep-alive',
+72 silly registry.get     'x-served-by': 'cache-sjc3128-SJC',
+72 silly registry.get     'x-cache': 'MISS',
+72 silly registry.get     'x-cache-hits': '0',
+72 silly registry.get     'x-timer': 'S1433272809.394844,VS0,VE104' } ]
+73 silly lockFile ad169971-karma-phantomjs-loader karma-phantomjs-loader@
+74 silly lockFile ad169971-karma-phantomjs-loader karma-phantomjs-loader@
+75 silly addNameRange number 2 { name: 'grunt-karma', range: '*', hasData: true }
+76 silly addNameRange versions [ 'grunt-karma',
+76 silly addNameRange   [ '0.3.0',
+76 silly addNameRange     '0.4.0',
+76 silly addNameRange     '0.4.1',
+76 silly addNameRange     '0.4.2',
+76 silly addNameRange     '0.4.3',
+76 silly addNameRange     '0.4.4',
+76 silly addNameRange     '0.5.0',
+76 silly addNameRange     '0.4.5',
+76 silly addNameRange     '0.5.1',
+76 silly addNameRange     '0.5.2',
+76 silly addNameRange     '0.4.6',
+76 silly addNameRange     '0.5.3',
+76 silly addNameRange     '0.5.4',
+76 silly addNameRange     '0.6.0',
+76 silly addNameRange     '0.6.1',
+76 silly addNameRange     '0.7.0',
+76 silly addNameRange     '0.6.2',
+76 silly addNameRange     '0.7.1',
+76 silly addNameRange     '0.7.2',
+76 silly addNameRange     '0.7.3',
+76 silly addNameRange     '0.8.0',
+76 silly addNameRange     '0.8.1',
+76 silly addNameRange     '0.8.2',
+76 silly addNameRange     '0.8.3',
+76 silly addNameRange     '0.9.0',
+76 silly addNameRange     '0.10.0',
+76 silly addNameRange     '0.10.1',
+76 silly addNameRange     '0.11.0' ] ]
+77 verbose addNamed [ 'grunt-karma', '0.11.0' ]
+78 verbose addNamed [ '0.11.0', '0.11.0' ]
+79 silly lockFile dea6f2ff-grunt-karma-0-11-0 grunt-karma@0.11.0
+80 verbose lock grunt-karma@0.11.0 /Volumes/MacData/bullit/.npm/dea6f2ff-grunt-karma-0-11-0.lock
+81 silly addNameRange number 2 { name: 'karma-jasmine', range: '*', hasData: true }
+82 silly addNameRange versions [ 'karma-jasmine',
+82 silly addNameRange   [ '0.0.1',
+82 silly addNameRange     '0.0.2',
+82 silly addNameRange     '0.0.3',
+82 silly addNameRange     '0.1.0',
+82 silly addNameRange     '0.1.1',
+82 silly addNameRange     '0.1.2',
+82 silly addNameRange     '0.1.3',
+82 silly addNameRange     '0.1.4',
+82 silly addNameRange     '0.1.5',
+82 silly addNameRange     '0.2.0',
+82 silly addNameRange     '0.2.1',
+82 silly addNameRange     '0.2.2',
+82 silly addNameRange     '0.2.3',
+82 silly addNameRange     '0.3.0',
+82 silly addNameRange     '0.3.1',
+82 silly addNameRange     '0.3.2',
+82 silly addNameRange     '0.3.3',
+82 silly addNameRange     '0.3.4',
+82 silly addNameRange     '0.3.5' ] ]
+83 verbose addNamed [ 'karma-jasmine', '0.3.5' ]
+84 verbose addNamed [ '0.3.5', '0.3.5' ]
+85 silly lockFile b510234b-karma-jasmine-0-3-5 karma-jasmine@0.3.5
+86 verbose lock karma-jasmine@0.3.5 /Volumes/MacData/bullit/.npm/b510234b-karma-jasmine-0-3-5.lock
+87 silly lockFile 0f904c2d-unt-karma-grunt-karma-0-11-0-tgz https://registry.npmjs.org/grunt-karma/-/grunt-karma-0.11.0.tgz
+88 verbose lock https://registry.npmjs.org/grunt-karma/-/grunt-karma-0.11.0.tgz /Volumes/MacData/bullit/.npm/0f904c2d-unt-karma-grunt-karma-0-11-0-tgz.lock
+89 silly lockFile ea1143b5--jasmine-karma-jasmine-0-3-5-tgz https://registry.npmjs.org/karma-jasmine/-/karma-jasmine-0.3.5.tgz
+90 verbose lock https://registry.npmjs.org/karma-jasmine/-/karma-jasmine-0.3.5.tgz /Volumes/MacData/bullit/.npm/ea1143b5--jasmine-karma-jasmine-0-3-5-tgz.lock
+91 verbose addRemoteTarball [ 'https://registry.npmjs.org/grunt-karma/-/grunt-karma-0.11.0.tgz',
+91 verbose addRemoteTarball   '8f649e26533635f2471c8e1f35d255f90a581b9d' ]
+92 verbose addRemoteTarball [ 'https://registry.npmjs.org/karma-jasmine/-/karma-jasmine-0.3.5.tgz',
+92 verbose addRemoteTarball   'd6c7bce49f0747b59b557156502a28009a44055d' ]
+93 info retry fetch attempt 1 at 12:20:09
+94 verbose fetch to= /var/folders/68/m_klj86s46sbj3w_hby_4x9m0000gn/T/npm-19313-NaJ3-l0+/registry.npmjs.org/grunt-karma/-/grunt-karma-0.11.0.tgz
+95 info retry fetch attempt 1 at 12:20:09
+96 verbose fetch to= /var/folders/68/m_klj86s46sbj3w_hby_4x9m0000gn/T/npm-19313-NaJ3-l0+/registry.npmjs.org/karma-jasmine/-/karma-jasmine-0.3.5.tgz
+97 http GET https://registry.npmjs.org/grunt-karma/-/grunt-karma-0.11.0.tgz
+98 http GET https://registry.npmjs.org/karma-jasmine/-/karma-jasmine-0.3.5.tgz
+99 http 200 https://registry.npmjs.org/grunt-karma/-/grunt-karma-0.11.0.tgz
+100 http 200 https://registry.npmjs.org/karma-jasmine/-/karma-jasmine-0.3.5.tgz
+101 silly lockFile 0f904c2d-unt-karma-grunt-karma-0-11-0-tgz https://registry.npmjs.org/grunt-karma/-/grunt-karma-0.11.0.tgz
+102 silly lockFile 0f904c2d-unt-karma-grunt-karma-0-11-0-tgz https://registry.npmjs.org/grunt-karma/-/grunt-karma-0.11.0.tgz
+103 silly lockFile dea6f2ff-grunt-karma-0-11-0 grunt-karma@0.11.0
+104 silly lockFile dea6f2ff-grunt-karma-0-11-0 grunt-karma@0.11.0
+105 silly lockFile 94531edb-grunt-karma grunt-karma@
+106 silly lockFile 94531edb-grunt-karma grunt-karma@
+107 silly lockFile ea1143b5--jasmine-karma-jasmine-0-3-5-tgz https://registry.npmjs.org/karma-jasmine/-/karma-jasmine-0.3.5.tgz
+108 silly lockFile ea1143b5--jasmine-karma-jasmine-0-3-5-tgz https://registry.npmjs.org/karma-jasmine/-/karma-jasmine-0.3.5.tgz
+109 silly lockFile b510234b-karma-jasmine-0-3-5 karma-jasmine@0.3.5
+110 silly lockFile b510234b-karma-jasmine-0-3-5 karma-jasmine@0.3.5
+111 silly lockFile a9316641-karma-jasmine karma-jasmine@
+112 silly lockFile a9316641-karma-jasmine karma-jasmine@
+113 error 404 404 Not Found: karma-phantomjs-loader
+113 error 404
+113 error 404 'karma-phantomjs-loader' is not in the npm registry.
+113 error 404 You should bug the author to publish it
+113 error 404 It was specified as a dependency of 'mongoServer'
+113 error 404
+113 error 404 Note that you can also install from a
+113 error 404 tarball, folder, or http url, or git url.
+114 error System Darwin 13.4.0
+115 error command "/Volumes/MacData/bullit/.node/bin/node" "/Volumes/MacData/bullit/.node/bin/npm" "install" "grunt-karma" "karma-jasmine" "karma-phantomjs-loader" "--save-dev"
+116 error cwd /Volumes/MacData/bullit/cfjs/0511/mongoServer
+117 error node -v v0.10.35
+118 error npm -v 1.4.28
+119 error code E404
+120 verbose exit [ 1, true ]
