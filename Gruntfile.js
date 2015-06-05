@@ -49,7 +49,7 @@ module.exports = function(grunt) {
                 }
             },
             server: {
-                src: ['Gruntfile.js', 'lib/server.js', 'models/*.js', 'routes/*.js']
+                src: ['Gruntfile.js', 'lib/*.js', 'models/*.js', 'routes/*.js']
             },
             client: {
                 src: ['app/**/*.js'],

@@ -3,7 +3,7 @@
 var mongoose = require('mongoose');
 
 var EntrySchema = mongoose.Schema({
-    title: String,
+    title: {type: String, required: true},
     ideaBody: String,
     tag: {type:String, index:true}
 });
