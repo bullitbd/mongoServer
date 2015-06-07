@@ -21,9 +21,9 @@ module.exports = function(router) {
         });
     });
 
-    router.get('/entries/:id', function(req, res) {
-
-        Entry.find({_id: req.params.id}, function(err, data)  {
+    router.get('/entries/:tag', eatAuth, function(req, res) {
+        var regex = new RegExp('.*' + req.params.tag + '.*', 'i');
+        Entry.find({tag: {$regex: regex}, authorId: req.user._id}, function(err, data)  {
             if (err) {
                 res.status(500).send({msg: 'couldn\'t find data'});
                 return;
@@ -36,9 +36,12 @@ module.exports = function(router) {
     // simple body post - writeFile...
     router.post('/entries', eatAuth, function(req, res) {
         var newEntry = new Entry(req.body);
+        newEntry.authorId = req.user._id;
         newEntry.save(function(err, data) {
-            if (err) {res.status(500).send({msg: 'couldn\'t save post'});
-            return;}
+            if (err) {
+                res.status(500).send({msg: 'couldn\'t save post'});
+                return;
+            }
             res.json(data);
         });
     });
@@ -49,7 +52,7 @@ module.exports = function(router) {
     router.put('/entries/:id', eatAuth, function(req, res) {
         var updated = req.body;
         delete updated._id;
-        Entry.update({_id: req.params.id}, updated, function(err, data) {
+        Entry.update({_id: req.params.id, authorId: req.user._id}, updated, function(err, data) {
             if (err) {
                 res.status(500).send({msg: 'couldn\'t save post'});
                 return;
@@ -60,7 +63,7 @@ module.exports = function(router) {
 
     // delete
     router.delete('/entries/:id', eatAuth, function(req, res) {
-        Entry.remove({_id:req.params.id}, function(err, data) {
+        Entry.remove({_id:req.params.id, authorId: req.user._id}, function(err, data) {
             if (err) {
                 res.status(500).send({msg: 'couldn\'t delete entry'});
                 return;
