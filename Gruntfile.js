@@ -1,3 +1,4 @@
+
     'use strict';
 
 module.exports = function(grunt) {
@@ -16,9 +17,7 @@ module.exports = function(grunt) {
             options: {
                 node: true
             },
-            // dev: {
-            //     src: ['Gruntfile.js', 'lib/**/*.js', 'test/**/*.js', 'index.js', 'models/**/*.js', 'routes/**/*.js']
-            // },
+
             jasmine: {
                 src: ['test/karma_tests/*test.js'],
                 options: {
@@ -36,7 +35,7 @@ module.exports = function(grunt) {
             }, 
 
             mocha: {
-                src: ['test/server_tests/*test.js'],
+                src: ['test/server_tests/*.js'],
                 options: {
                     globals: {
                         describe: true,
@@ -49,7 +48,7 @@ module.exports = function(grunt) {
                 }
             },
             server: {
-                src: ['Gruntfile.js', 'lib/server.js', 'models/*.js', 'routes/*.js']
+                src: ['Gruntfile.js', 'lib/*.js', 'models/*.js', 'routes/*.js']
             },
             client: {
                 src: ['app/**/*.js'],
@@ -73,12 +72,12 @@ module.exports = function(grunt) {
                 src: ['test/server_tests/*.js']
             }
         },
-        watch: {
-            scripts: {
-                files: ['lib/**/*.js', 'test/*.js'],
-                tasks: ['jshint']
-            }
-        },
+        // watch: {
+        //     scripts: {
+        //         files: ['lib/**/*.js', 'test/*.js'],
+        //         tasks: ['jshint']
+        //     }
+        // },
         
         webpack: {
             client: {
@@ -127,11 +126,11 @@ module.exports = function(grunt) {
         }
         
     });
-    grunt.registerTask('jshint:all', ['jshint:jasmine', 'jshint:mocha', 'jshint:server', 'jshint:client', 'jscs']);
+    grunt.registerTask('hint', ['jshint:mocha', 'jshint:server', 'jshint:jasmine', 'jshint:client', 'jscs']);
     grunt.registerTask('servertests', ['jshint:server', 'jscs', 'simplemocha', ]);
     grunt.registerTask('karmatests', ['webpack:karma_test', 'karma:test']);
     grunt.registerTask('build', ['webpack:client', 'copy:html']);
-    grunt.registerTask('default', ['jshint:all', 'build', 'servertests', 'karmatests', ]);
+    grunt.registerTask('default', ['hint', 'simplemocha', 'build', 'karmatests', ]);
 
 
 };
